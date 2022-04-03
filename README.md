@@ -3,7 +3,7 @@ Referring to the small modification made by "ferrine/md-img-paste.vim" file, the
 
 ## 基本设置请参考 [ferrine/md-img-paste.vim](https://github.com/ferrine/md-img-paste.vim)
 
-## 在 ferrine 的  plugin/mdip.vim 中添加了如下指令
+## 在 ferrine 的  plugin/mdip.vim 中修改了如下指令
 ```vim
 " let g:PasteImageFunction = 'g:MarkdownPasteImage'
 autocmd FileType markdown let g:PasteImageFunction = 'g:MarkdownPasteImage'
