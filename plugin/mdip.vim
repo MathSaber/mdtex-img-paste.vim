@@ -177,10 +177,18 @@ function! s:InputName()
     return name
 endfunction
 
+"function! g:MarkdownPasteImage(relpath)
+"        execute "normal! i![" . g:mdip_tmpname[0:0]
+"        let ipos = getcurpos()
+"        execute "normal! a" . g:mdip_tmpname[1:] . "](" . a:relpath . ")\r"
+"        call setpos('.', ipos)
+"        execute "normal! vt]\<C-g>"
+"endfunction
+
 function! g:MarkdownPasteImage(relpath)
-        execute "normal! i![" . g:mdip_tmpname[0:0]
+        execute "normal! i<div align=\"center\"><img src=\"" . a:relpath . "\" alt=\"Image\" style=\"zoom:%;\" /><\/div>\r"
         let ipos = getcurpos()
-        execute "normal! a" . g:mdip_tmpname[1:] . "](" . a:relpath . ")"
+"        execute "normal! a" . g:mdip_tmpname[1:] . "\"(" . a:relpath . ")"
         call setpos('.', ipos)
         execute "normal! vt]\<C-g>"
 endfunction
